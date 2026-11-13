@@ -1,0 +1,13 @@
+:root{font-family:'Segoe UI','Microsoft YaHei',sans-serif;color:#3f5944;background:transparent;color-scheme:light}
+*{box-sizing:border-box}body{margin:0;width:80px;height:88px;overflow:hidden;user-select:none;background:transparent}
+[hidden]{display:none!important}button{font:inherit;cursor:pointer}button:focus-visible,#file-mat:focus-visible{outline:2px solid #75995d;outline-offset:2px}
+#buddy-canvas{position:absolute;inset:0;width:80px;height:88px;image-rendering:pixelated;pointer-events:none}
+#buddy-status{position:absolute;left:6px;top:67px;width:68px;height:18px;padding:0;border:0;background:#f5f3dddf;border-radius:3px;font-size:10px;color:#45613f;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+#buddy-status[data-state='working']{background:#e4eff1;color:#456675}#buddy-status[data-state='failed']{background:#fae2d6;color:#9d5c3e}#buddy-status[data-state='done']{background:#e3edce}
+#buddy-body{position:absolute;inset:0;width:60px;height:55px;cursor:grab;border:0;background:transparent;touch-action:none}
+#buddy-body:active{cursor:grabbing}
+#file-mat{position:absolute;left:10px;top:9px;width:60px;height:55px;cursor:copy;border:0;border-radius:6px}
+#file-name{max-width:194px;font-size:11px;line-height:14px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#4e6444;pointer-events:none}
+#mat-hint{font-size:9px;color:#829071;pointer-events:none}#file-mat.is-over{outline:2px dashed #719455;outline-offset:-5px}#file-mat.is-busy{cursor:wait}
+#buddy-error{position:absolute;left:6px;top:67px;width:68px;height:18px;margin:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;background:#fff0d2;border-radius:3px;font-size:10px;line-height:18px;padding:0 3px;pointer-events:none;z-index:3}
+#browser-warning{position:absolute;inset:0;background:#f6f7ea;font-size:14px;padding:20px;z-index:10}

@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>纸间便利贴</title><link rel="stylesheet" href="/file-note.css"><script type="module" src="/src/file-note.mjs"></script></head>
+<body>
+  <header><span class="pin" aria-hidden="true"></span><strong id="note-title">纸间便利贴</strong><button id="note-edit" type="button" aria-label="编辑名字和角色" title="编辑名字和角色">✎</button><button id="note-close" type="button" aria-label="暂时收起便利贴">×</button></header>
+  <p id="note-squad" hidden title="输入 /名字 加上要说的话可以召唤同组成员；把另一只拖到小队成员身上可以加入或调整关系；离开小队在桌宠右键菜单里。"><canvas id="note-rank" width="13" height="12" aria-hidden="true"></canvas><span id="note-squad-text"></span></p>
+  <section id="note-help" hidden aria-label="需要你决定"><div class="help-head"><strong>需要你</strong><button id="help-dismiss" type="button" aria-label="结束这次求助" title="结束这次求助，它们不再接着聊">×</button></div><p id="help-topic"></p><p id="help-reason"></p><p id="help-text"></p><div class="buttons"><button id="help-continue" type="button">让它们再聊几句</button><button id="help-answer" type="button">我来回答</button></div></section>
+  <p id="note-waiting" role="status" hidden></p>
+  <main>
+    <div id="note-attachment"><div><p id="note-file">可以直接聊天，也可以拖文件给我</p><p id="note-meta">附件在发送指令后才供 agent 读取</p></div><button id="attachment-remove" type="button" aria-label="移除当前附件" hidden>×</button></div>
+    <section id="note-messages" role="log" aria-label="对话消息"><p id="note-welcome">今天有什么需要帮忙的？<br><span class="hint">可以总结文本、讨论内容，或让我生成一份副本。原文件始终保留。</span></p></section>
+    <section id="note-confirming" hidden aria-label="确认本次文件写入"><h1 id="confirm-title">确认生成副本</h1><p class="hint">仅这一次；不修改原文件，不覆盖同名文件。</p><p id="confirm-path" class="path"></p><pre id="confirm-preview" hidden></pre><div class="buttons"><button id="confirm-back" type="button">拒绝</button><button id="confirm-go" type="button">确认生成</button></div></section>
+    <p id="note-error" role="status" hidden></p>
+    <p id="note-activity" role="status">独立 Qoder 会话 · 待命</p>
+  </main>
+  <form id="chat-form"><ul id="chat-suggest" role="listbox" aria-label="可以召唤的同组成员" hidden></ul><label class="sr-only" for="chat-input">输入给 agent 的指令</label><textarea id="chat-input" rows="2" maxlength="8000" placeholder="写下指令…  Enter 发送，Shift+Enter 换行"></textarea><div class="composer-actions"><button id="chat-reset" type="button">新对话</button><button id="chat-stop" type="button" hidden>停止</button><button id="chat-send" type="submit">发送 ↗</button></div></form>
+  <footer><span id="note-provider" title="由模型服务处理指令与所需附件内容；不继承当前 IDE 对话。认证使用本机环境变量，不要在此粘贴凭据。">云端推理 · 原文件不动</span><button id="note-inbox" type="button">收纳箱 ↗</button></footer>
+</body>
+</html>

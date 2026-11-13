@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>桌宠设定</title><link rel="stylesheet" href="/buddy-edit.css"><script type="module" src="/src/buddy-edit.mjs"></script></head>
+<body>
+  <header><span class="pin" aria-hidden="true"></span><strong id="edit-title">新建桌宠</strong><button id="edit-close" type="button" aria-label="关闭设定">×</button></header>
+  <form id="edit-form" novalidate>
+    <div class="top">
+      <canvas id="edit-preview" width="72" height="72" aria-hidden="true"></canvas>
+      <div class="fields"><label for="edit-name">名字</label><input id="edit-name" maxlength="12" autocomplete="off" spellcheck="false"><p id="edit-provider" class="hint">独立 agent 会话</p></div>
+    </div>
+    <label for="edit-role">角色与分工 <span class="hint">可选</span></label>
+    <textarea id="edit-role" rows="4" maxlength="300" placeholder="例如：资料员。负责读附件、提炼要点，回答尽量分条列出。"></textarea>
+    <p id="edit-count" class="count">0 / 300</p>
+    <fieldset><legend>颜色</legend><div id="edit-colors" class="choices"></div></fieldset>
+    <fieldset><legend>造型</legend><div id="edit-styles" class="choices"></div></fieldset>
+    <p id="edit-hint" class="hint"></p>
+    <p id="edit-error" role="status" hidden></p>
+    <div class="buttons"><button id="edit-cancel" type="button">取消</button><button id="edit-save" type="submit">创建</button></div>
+  </form>
+  <p id="browser-warning" hidden>请通过 npm run desktop:files 启动文件桌宠。</p>
+</body>
+</html>

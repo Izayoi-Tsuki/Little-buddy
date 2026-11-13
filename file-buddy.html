@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>纸间文件桌宠</title><link rel="stylesheet" href="/file-buddy.css"><script type="module" src="/src/file-buddy-view.mjs"></script></head>
+<body>
+  <canvas id="buddy-canvas" width="80" height="88" aria-hidden="true"></canvas>
+  <button id="buddy-status" type="button" title="打开便利贴聊天">聊一聊</button>
+  <section id="file-mat" aria-label="拖入一个文件作为聊天附件" tabindex="0">
+    <button id="buddy-body" type="button" aria-label="点击聊天，拖动移动桌宠" title="点击聊天 · 拖文件给我 · 拖动移动"></button>
+    <span id="file-name" hidden></span><span id="mat-hint" hidden></span>
+  </section>
+  <p id="buddy-error" role="status" hidden></p>
+  <p id="browser-warning" hidden>请通过 npm run desktop:files 启动文件桌宠。</p>
+</body>
+</html>

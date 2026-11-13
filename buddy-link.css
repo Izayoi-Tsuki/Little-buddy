@@ -1,0 +1,20 @@
+:root{font-family:'Segoe UI','Microsoft YaHei',sans-serif;color:#625b39;color-scheme:light;background:#fff4bd}
+*{box-sizing:border-box}html,body{height:100%}body{margin:0;width:260px;display:flex;flex-direction:column;overflow:hidden;border:1px solid #d1ba71;background:linear-gradient(130deg,#fff8d1,#fff1b0)}
+[hidden]{display:none!important}button{font:inherit}p{margin:0}
+button{border:1px solid #d1bb79;border-radius:4px;background:#fff9df;color:#65562b;cursor:pointer;font-size:11px;padding:4px 10px}button:hover{background:#fffef1}button:disabled{opacity:.5;cursor:not-allowed}
+button:focus-visible{outline:2px solid #78945f;outline-offset:1px}
+header{height:30px;flex:none;display:flex;align-items:center;gap:7px;padding:3px 10px;background:#efdd9833;-webkit-app-region:drag;font-size:12px}
+header strong{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+header button{-webkit-app-region:no-drag;margin-left:auto;padding:0;width:23px;height:22px;font-size:17px;border:0;background:transparent}
+.pin{width:6px;height:6px;flex:none;background:#bf765d;box-shadow:1px 2px 0 #9266494d;border-radius:50%}
+main{flex:1;min-height:0;display:flex;flex-direction:column;gap:5px;padding:6px 12px 10px}
+#link-preview{width:160px;height:52px;align-self:center;flex:none;image-rendering:pixelated}
+#link-note{font-size:11px;line-height:1.5;color:#7a6c3f}
+#link-options{display:flex;flex-direction:column;gap:5px}
+.option{display:flex;flex-direction:column;align-items:flex-start;gap:1px;width:100%;height:38px;padding:3px 9px;text-align:left}
+.option strong{font-size:12px;font-weight:600;color:#55602f;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.option span{font-size:10px;color:#8b7c4b;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.option:hover{background:#f3f2d8;border-color:#a9b47c}
+#link-error{font-size:11px;line-height:1.45;color:#9b4e34}
+.buttons{display:flex;justify-content:flex-end;margin-top:auto;flex:none}
+#browser-warning{position:absolute;inset:0;background:#f6f7ea;font-size:14px;padding:20px}

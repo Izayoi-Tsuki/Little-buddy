@@ -1,0 +1,28 @@
+{
+  "name": "little-buddy",
+  "version": "0.5.0",
+  "private": true,
+  "type": "module",
+  "main": "desktop/buddy-main.mjs",
+  "scripts": {
+    "start": "node desktop/launch.mjs",
+    "check": "node desktop/launch.mjs --smoke-test",
+    "desktop:files": "node desktop/launch.mjs",
+    "desktop:files:check": "node desktop/launch.mjs --smoke-test",
+    "desktop:install": "node desktop/install-runtime.mjs",
+    "test": "node --test tests/buddy-agent.test.mjs tests/buddy-deepseek.test.mjs tests/buddy-dispatch.test.mjs tests/buddy-registry.test.mjs tests/buddy-squads.test.mjs tests/file-buddy.test.mjs"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "devDependencies": {
+    "electron": "45.2.1"
+  },
+  "dependencies": {
+    "@qoder-ai/qoder-agent-sdk": "1.0.59",
+    "zod": "4.6.7"
+  },
+  "allowScripts": {
+    "@qoder-ai/qoder-agent-sdk@1.0.59": true
+  }
+}
